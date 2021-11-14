@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: hsla(0, 0%, 100%, 0.288);
+    height: 75vh;
+}
+.logo{
+    height: 25vh;
+    text-align: center;
+    padding-top: 15%;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0.2em 2em;
+}
+::placeholder{
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+    color: black;
+}
+p{
+    padding: 1em 6em 0;
+    text-align: center;
+    font-weight: bolder;
+}
+h2{
+    padding: 5em 4em 1em;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    text-transform: uppercase;
+    font-size: x-large;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    width: 80%;
+    padding: 2em;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background: none;
+    margin: 0.5em;
+    align-self: center;
+    font-size: x-small;
+}
+input[type="submit"] {
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    font-size: medium;
+    font-weight: bolder;
+    background: none;
+    padding: 0.5em;
+}
+
+@media (width: 425px){
+    .cover{
+        background: url(./photo/mobile.jpg) center/cover no-repeat fixed;
+        height: 100vh;
+    }
+}
+@media (width: 768px){
+    .cover{
+        background: url(./photo/768.png) no-repeat fixed;
+        background-size: cover;
+        background-position: center;
+    }
+    .logo{
+        height: 18vh;
+        padding: 2em 2em;
+        text-align: left;
+    }
+    h2, h3, p{
+        text-align: left;
+        padding-left: 3em;
+        padding-right: 10em;
+    }
+    p{
+        text-align: left;
+        padding-left: 4.5em;
+    }
+    input{
+        width: 100%;
+    }
+    form{
+        width: 70%;
+        padding-left: 4em;
+        gap: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+}
+    input[name="fname"]{
+        grid-area: 1/1;
+    }
+    input[name="fsurname"]{
+        grid-area: 1/2;
+    }
+    input[type="email"]{
+        grid-area: 2/1/3/3;
+    }
+    input[type="submit"]{
+        grid-area: 3;
+    }
+}
+@media (width: 1440px){
+    .cover{
+        background: url(./photo/max.png) no-repeat fixed;
+        background-size: contain;
+        background-position: right;
+    }
+    .container{
+        background: hsla(0, 0%, 100%, 0.288);
+        height: 75vh;
+        width: 50%;
+    }
+    .logo{
+        height: 18vh;
+        width: 50%;
+        padding: 5em 5em;
+        text-align: left;
+    }
+    h2, h3, p{
+        text-align: left;
+        padding-left: 3em;
+        padding-right: 10em;
+    }
+    p{
+        text-align: left;
+        padding-left: 4.5em;
+    }
+    input{
+        width: 100%;
+    }
+    form{
+        width: 70%;
+        padding-left: 4em;
+        gap: 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    input[name="fname"]{
+        grid-area: 1/1;
+    }
+    input[name="fsurname"]{
+        grid-area: 1/2;
+    }
+    input[type="email"]{
+        grid-area: 2/1/3/3;
+    }
+    input[type="submit"]{
+        grid-area: 3;
+    }
+}
